@@ -1,4 +1,4 @@
-MVVM Templates by Pascal Wyss
+MVVM Templates
 =============
 
 My Template Collection for .NET (C#, WPF, MVVM)
