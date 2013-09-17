@@ -2,9 +2,8 @@
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using GalaSoft.MvvmLight.Command;
-using MVVM_TreeView.Core;
 
-namespace Core
+namespace MVVM_TreeView.Core
 {
     public class CloseableViewModel : ViewModelBase
     {

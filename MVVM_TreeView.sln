@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVM_TreeView", "MVVM_TreeV
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFPersistentTabControl", "E:\VStudio12Workspace\Faktura\WPFPersistentTabControl\WPFPersistentTabControl.csproj", "{5E6C44F7-D842-4446-993F-87C3BEF86BF3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Splasher", "E:\VStudio12Workspace\FundDataBase\Splasher\Splasher.csproj", "{855C1E83-A0B1-4957-BF0F-6AB3D94E915C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{5E6C44F7-D842-4446-993F-87C3BEF86BF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E6C44F7-D842-4446-993F-87C3BEF86BF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E6C44F7-D842-4446-993F-87C3BEF86BF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{855C1E83-A0B1-4957-BF0F-6AB3D94E915C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{855C1E83-A0B1-4957-BF0F-6AB3D94E915C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{855C1E83-A0B1-4957-BF0F-6AB3D94E915C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{855C1E83-A0B1-4957-BF0F-6AB3D94E915C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

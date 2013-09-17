@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MVVM_TreeView
+namespace MVVM_TreeView.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for SplashWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SplashWindow : Window
     {
-        public MainWindow()
+        public SplashWindow()
         {
             InitializeComponent();
         }

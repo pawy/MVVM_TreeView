@@ -5,9 +5,8 @@ using System.Text.RegularExpressions;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
 using GalaSoft.MvvmLight.Command;
-using MVVM_TreeView.Core;
 
-namespace Core
+namespace MVVM_TreeView.Core
 {
     public class ToolBarItemViewModel : ViewModelBase
     {
