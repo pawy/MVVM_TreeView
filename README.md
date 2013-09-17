@@ -1,4 +1,4 @@
-MVVM_TreeView
+MVVM Templates
 =============
 
 My Template Collection for .NET (C#, WPF, MVVM)
