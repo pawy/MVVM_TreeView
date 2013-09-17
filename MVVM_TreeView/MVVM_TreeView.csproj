@@ -130,12 +130,6 @@
     <Folder Include="Resources\Images\Icons\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="E:\VStudio12Workspace\FundDataBase\Splasher\Splasher.csproj">
-      <Project>{855c1e83-a0b1-4957-bf0f-6ab3d94e915c}</Project>
-      <Name>Splasher</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\Images\splashscreen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
