@@ -1,8 +1,45 @@
 ﻿<Window x:Class="MVVM_TreeView.View.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-      <Label>Well, there's nothing to see here :)</Label>
-    </Grid>
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:command="http://www.galasoft.ch/mvvmlight"
+        xmlns:MVVMCore="clr-namespace:MVVM_TreeView.Core"
+        Title="{Binding Path=DisplayName}" 
+        Width="1400" Height="1024"
+        MinWidth="1400" MinHeight="1024"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Normal"
+        IsEnabled="{Binding IsEnabled}"
+        Background="AliceBlue">
+    <i:Interaction.Triggers>
+      <i:EventTrigger EventName="Closing">
+        <command:EventToCommand Command="{Binding WindowClosing}" PassEventArgsToCommand="True" />
+      </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <DockPanel>
+    
+    <!--
+      Menu Bar
+      -->
+    <Border DockPanel.Dock="Top" Margin="0,0,0,4" Background="White">
+      <Border.Effect>
+        <DropShadowEffect Direction="270" BlurRadius="5" ShadowDepth="1" Opacity="0.5" RenderingBias="Performance" />
+      </Border.Effect>
+      <DockPanel KeyboardNavigation.TabNavigation="None">
+        <Menu KeyboardNavigation.TabNavigation="Cycle" DockPanel.Dock="Top" Background="White" Padding="3">
+          <MenuItem Header="_File">
+            <MenuItem Header="_Close"
+                  Command="{Binding Path=CloseCommand}" />
+          </MenuItem>
+        </Menu>
+
+        <ToolBarTray KeyboardNavigation.TabNavigation="Cycle" MinHeight="40">
+          <ToolBar ItemsSource="{Binding ToolBarItems}" />
+        </ToolBarTray>
+
+      </DockPanel>
+    </Border>
+    
+    <Label>Well, there's nothing to see here :)</Label>
+  </DockPanel>
 </Window>

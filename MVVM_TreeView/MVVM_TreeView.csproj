@@ -76,6 +76,10 @@
     <Compile Include="WPFConverters\InvertableBooleanToVisibilityConverter.cs" />
     <Compile Include="WPFConverters\InvertedBooleanConverter.cs" />
     <Compile Include="WPFConverters\RadioBoolConverter.cs" />
+    <Page Include="Resources\XAML\Templates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -126,9 +130,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\Images\Icons\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Resources\Images\splashscreen.png" />
   </ItemGroup>
@@ -137,6 +139,12 @@
       <Project>{855c1e83-a0b1-4957-bf0f-6ab3d94e915c}</Project>
       <Name>Splasher</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Icons\bug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Icons\close.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

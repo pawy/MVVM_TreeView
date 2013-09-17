@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
+using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -93,28 +94,50 @@ namespace MVVM_TreeView.ViewModel
 
         public MainWindowViewModel()
         {
+            CreateToolBarItems();
         }
 
         #endregion
 
-        #region Private Helpers
+        #region ToolBarItems
+
+        private ToolBarItemViewModel _tbmagic;
+        private ToolBarItemViewModel _tbclose;
+
+        private void CreateToolBarItems()
+        {
+            _tbmagic = new ToolBarItemViewModel("Click this", "bug", "Click for some magic");
+            _tbmagic.CommandExecuted += (x, y) => TBIMagic();
+
+            _tbclose = new ToolBarItemViewModel("Close", "close", "Close the application");
+            _tbclose.CommandExecuted += (x, y) => this.CloseCommand.Execute(null);
+
+            RefreshToolBarItems();
+        }
 
         private void RefreshToolBarItems()
         {
             // Clear Items
             base.ToolBarItems.Clear();
 
-
+            // Add Items
+            base.ToolBarItems.Add(_tbmagic);
             base.ToolBarItems.Add(ToolBarItemSeparatorViewModel.Instance);
+            base.ToolBarItems.Add(_tbclose);
         }
+
+        #endregion
+
+        #region Private Helpers
+
+        private void TBIMagic()
+        {
+            MessageBox.Show("Yayyyyyyyy");
+        }
+
         #endregion
 
         #region EventHandlers
-
-        private void OnWorkspaceToolBarItemsChanged(object sender, NotifyCollectionChangedEventArgs e)
-        {
-            RefreshToolBarItems();
-        }
 
         #endregion
 
